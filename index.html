@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KAYVARA VT MARKET</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,91 +14,218 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0d0d0d;
+background:#050505;
 color:white;
 }
 
+/* HEADER */
+
 header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
 background:#000;
-padding:20px;
-text-align:center;
-border-bottom:2px solid gold;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-font-size:36px;
-font-weight:bold;
-color:gold;
+font-size:28px;
+font-weight:700;
+color:#d4af37;
 }
 
-.hero{
-padding:80px 20px;
-text-align:center;
-}
-
-.hero h1{
-font-size:45px;
-color:gold;
-}
-
-.hero p{
-margin-top:10px;
-color:#ccc;
-}
-
-.kategori{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-padding:50px 20px;
-}
-
-.card{
-width:320px;
-background:#1a1a1a;
-border:1px solid #333;
-border-radius:15px;
-padding:25px;
-text-align:center;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
 transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-8px);
-border-color:gold;
+nav a:hover{
+color:#d4af37;
 }
 
-.card h2{
-color:gold;
-margin-bottom:15px;
+/* HERO */
+
+.hero{
+min-height:80vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 8%;
+background:
+linear-gradient(to right,#000 40%,rgba(0,0,0,.4)),
+url('banner.jpg') center/cover;
 }
 
-.card p{
+.hero-text{
+max-width:550px;
+}
+
+.hero-text h1{
+font-size:65px;
+line-height:1.1;
 margin-bottom:20px;
+}
+
+.hero-text span{
+color:#d4af37;
+}
+
+.hero-text p{
 color:#ccc;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
-background:gold;
+padding:14px 35px;
+background:#d4af37;
 color:black;
 text-decoration:none;
 font-weight:bold;
 border-radius:8px;
 }
 
-footer{
-margin-top:50px;
-padding:20px;
+.btn:hover{
+opacity:.8;
+}
+
+/* INFO */
+
+.info{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:40px 8%;
+}
+
+.info-box{
+background:#111;
+padding:25px;
+border:1px solid #222;
+border-radius:15px;
+}
+
+.info-box h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* KATEGORI */
+
+.section-title{
 text-align:center;
+font-size:40px;
+margin-top:50px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+.kategori{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:0 8%;
+}
+
+.card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #222;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card h2{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.card p{
+color:#ccc;
+margin-bottom:20px;
+}
+
+/* PROMO */
+
+.promo{
+margin:80px 8%;
+padding:60px;
+background:linear-gradient(135deg,#111,#1a1a1a);
+border-radius:25px;
+border:1px solid #333;
+text-align:center;
+}
+
+.promo h2{
+font-size:45px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.promo p{
+margin-bottom:25px;
+color:#ccc;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
 background:#000;
-border-top:2px solid gold;
+padding:50px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+}
+
+.footer-title{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.footer-grid a{
+display:block;
+margin-bottom:10px;
+color:#ccc;
+text-decoration:none;
+}
+
+.footer-grid a:hover{
+color:#d4af37;
+}
+
+.copy{
+margin-top:40px;
+text-align:center;
+color:#777;
 }
 
 </style>
@@ -103,47 +233,168 @@ border-top:2px solid gold;
 <body>
 
 <header>
+
 <div class="logo">
 KAYVARA VT MARKET
 </div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Top Up</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
 </header>
 
 <section class="hero">
-<h1>Marketplace KAYVARA VT MARKET</h1>
-<p>Pakaian Premium & Top Up Game Digital</p>
+
+<div class="hero-text">
+
+<h1>
+WELCOME TO <br>
+<span>KAYVARA VT MARKET</span>
+</h1>
+
+<p>
+Marketplace Premium untuk Fashion VEAT dan Top Up Game Digital.
+</p>
+
+<a href="#" class="btn">
+SHOP NOW
+</a>
+
+</div>
+
 </section>
 
-<div class="kategori">
+<section class="info">
+
+<div class="info-box">
+<h3>⚡ Penghantaran Cepat</h3>
+<p>Pesanan diproses dengan pantas.</p>
+</div>
+
+<div class="info-box">
+<h3>🛡️ Produk Berkualiti</h3>
+<p>Produk pilihan terbaik.</p>
+</div>
+
+<div class="info-box">
+<h3>💳 Bayaran Mudah</h3>
+<p>Pelbagai kaedah pembayaran.</p>
+</div>
+
+<div class="info-box">
+<h3>🎧 Support 24/7</h3>
+<p>Khidmat pelanggan sentiasa aktif.</p>
+</div>
+
+</section>
+
+<h2 class="section-title">
+KATEGORI POPULAR
+</h2>
+
+<section class="kategori">
 
 <div class="card">
-<h2>👕 VEAT APPAREL</h2>
+
+<img src="veat.jpg">
+
+<div class="card-content">
+
+<h2>VEAT APPAREL</h2>
+
 <p>
-Kaos, Hoodie, Topi dan Fashion Premium VEAT.
+Kaos, Hoodie, Topi dan Fashion Premium.
 </p>
 
 <a href="produk.html" class="btn">
-BELANJA PAKAIAN
+BELANJA
 </a>
+
+</div>
 
 </div>
 
 <div class="card">
-<h2> TOP UP GAME PC</h2>
+
+<img src="game.jpg">
+
+<div class="card-content">
+
+<h2>TOP UP GAME</h2>
+
 <p>
-Mobile Legends, Free Fire, PUBG Mobile, Roblox dan lainnya.
+Valorant, Mobile Legends, Free Fire, PUBG dan banyak lagi.
 </p>
 
 <a href="pc-topup.html" class="btn">
-TOP UP SEKARANG
-</a>
+TOP UP
 </a>
 
 </div>
 
 </div>
+
+</section>
+
+<section class="promo">
+
+<h2>PROMOSI TERKINI</h2>
+
+<p>
+Dapatkan voucher dan tawaran menarik setiap minggu.
+</p>
+
+<a href="#" class="btn">
+LIHAT PROMO
+</a>
+
+</section>
 
 <footer>
+
+<div class="footer-grid">
+
+<div>
+<h3 class="footer-title">
+KAYVARA VT MARKET
+</h3>
+
+<p>
+Express Togetherness
+</p>
+</div>
+
+<div>
+<h3 class="footer-title">
+MENU
+</h3>
+
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Top Up</a>
+</div>
+
+<div>
+<h3 class="footer-title">
+HUBUNGI KAMI
+</h3>
+
+<a href="#">WhatsApp</a>
+<a href="#">Telegram</a>
+<a href="#">Facebook</a>
+</div>
+
+</div>
+
+<div class="copy">
 © 2026 KAYVARA VT MARKET
+</div>
+
 </footer>
 
 </body>
