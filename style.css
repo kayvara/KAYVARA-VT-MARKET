@@ -1,128 +1,177 @@
-/* Reset & body */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #0b0b0b;
-    color: gold;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    font-family:Arial, sans-serif;
 }
 
 /* Navbar */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: #111;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:#111;
+    border-bottom:1px solid #333;
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo{
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
 }
 
-header nav a {
-    color: gold;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
 }
 
-header nav a:hover {
-    color: #fff;
+nav a:hover{
+    color:gold;
 }
 
 /* Hero */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(45deg, #111, #222);
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(to right,#111,#1b1b1b);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.hero h1{
+    color:gold;
+    font-size:48px;
+    margin-bottom:20px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.8;
 }
 
-.hero-buttons .btn-primary,
-.hero-buttons .btn-secondary {
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
+.hero-buttons{
+    margin-top:30px;
 }
 
-.btn-primary {
-    background-color: gold;
-    color: #111;
+.btn-primary,
+.btn-secondary{
+    display:inline-block;
+    padding:14px 30px;
+    margin:10px;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #fff;
-    color: #111;
+.btn-primary{
+    background:gold;
+    color:black;
+    font-weight:bold;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid gold;
-    color: gold;
+.btn-primary:hover{
+    transform:scale(1.05);
 }
 
-.btn-secondary:hover {
-    background-color: gold;
-    color: #111;
+.btn-secondary{
+    border:2px solid gold;
+    color:gold;
+}
+
+.btn-secondary:hover{
+    background:gold;
+    color:black;
 }
 
 /* Features */
-.features {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 50px 20px;
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:50px;
 }
 
-.features .feature {
-    max-width: 200px;
+.feature{
+    background:#1a1a1a;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #333;
+    text-align:center;
 }
 
-/* Categories */
-.categories {
-    text-align: center;
-    padding: 50px 20px;
+/* Kategori */
+.categories{
+    padding:50px;
+    text-align:center;
 }
 
-.categories h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.categories h2{
+    color:gold;
+    margin-bottom:40px;
 }
 
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
-.category-card {
-    background-color: #222;
-    border: 2px solid gold;
-    padding: 50px 20px;
-    border-radius: 10px;
-    transition: transform 0.2s;
-    cursor: pointer;
+.category-card{
+    background:#1a1a1a;
+    padding:40px 20px;
+    border-radius:20px;
+    border:1px solid #333;
+    font-size:40px;
+    transition:0.3s;
+    cursor:pointer;
 }
 
-.category-card:hover {
-    transform: scale(1.05);
+.category-card h3{
+    margin-top:15px;
+    font-size:20px;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:gold;
+}
+
+/* Promo */
+.promo{
+    margin:50px;
+    background:linear-gradient(to right,#111,#222);
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.promo h2{
+    color:gold;
+}
+
+.promo button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:gold;
+    cursor:pointer;
+    font-weight:bold;
 }
 
 /* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
+footer{
+    background:#111;
+    text-align:center;
+    padding:40px;
+    margin-top:50px;
+    border-top:1px solid #333;
 }
