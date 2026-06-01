@@ -12,6 +12,7 @@ if(storedUsers) users = storedUsers;
 // REGISTER MEMBER
 function registerMember(e){
     e.preventDefault();
+
     let username = document.getElementById('regUsername').value;
     let email = document.getElementById('regEmail').value;
     let hp = document.getElementById('regHP').value;
@@ -19,13 +20,41 @@ function registerMember(e){
     let pin = document.getElementById('regPin').value;
     let referral = document.getElementById('regReferral').value || "";
 
-    if(users.find(u=>u.username===username)){ alert('Username sudah ada'); return; }
+    // cek username sudah ada
+    if(users.find(u => u.username === username)){
+        alert('Username sudah ada!');
+        return;
+    }
 
-    let userID = "KVT" + String(users.length+1).padStart(6,'0');
-    users.push({username,password,role:"member",email,hp,saldo:0,pin,referral,userID});
+    // buat user id otomatis
+    let userID = "KVT" + String(users.length + 1).padStart(6, '0');
+
+    // buat akun baru
+    let newUser = {
+        username,
+        password,
+        role:"member",
+        email,
+        hp,
+        saldo:0,
+        pin,
+        referral,
+        userID
+    };
+
+    // simpan user
+    users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
-    alert('Berhasil daftar! User ID: '+userID);
-    window.location.href='login.html';
+
+    // AUTO LOGIN setelah daftar
+    localStorage.setItem('loggedIn', 'true');
+    localStorage.setItem('currentUser', JSON.stringify(newUser));
+
+    alert('Berhasil daftar! User ID: ' + userID);
+
+    // langsung masuk homepage member
+    window.location.href = 'index.html';
+}
 }
 
 // LOGIN
