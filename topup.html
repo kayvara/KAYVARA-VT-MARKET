@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KAYVARA VT MARKET - Top Up Game</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+}
+
+header{
+background:#000;
+padding:20px;
+border-bottom:2px solid gold;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:gold;
+text-align:center;
+}
+
+.subtitle{
+text-align:center;
+margin-top:5px;
+color:#ccc;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(135deg,#000,#1a1a1a);
+}
+
+.hero h1{
+font-size:40px;
+color:gold;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:gold;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+}
+
+.section-title{
+text-align:center;
+font-size:28px;
+margin:40px 0 20px;
+color:gold;
+}
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:#1a1a1a;
+border:1px solid #333;
+border-radius:12px;
+padding:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:gold;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h3{
+margin-top:15px;
+color:gold;
+}
+
+.card p{
+margin-top:8px;
+color:#ccc;
+}
+
+.form-section{
+max-width:700px;
+margin:50px auto;
+padding:30px;
+background:#1a1a1a;
+border-radius:15px;
+}
+
+.form-section h2{
+text-align:center;
+color:gold;
+margin-bottom:20px;
+}
+
+input,
+select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:8px;
+background:#333;
+color:white;
+}
+
+.buy-btn{
+width:100%;
+padding:15px;
+background:gold;
+border:none;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+}
+
+.buy-btn:hover{
+opacity:0.9;
+}
+
+.voucher{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.voucher-card{
+background:#1a1a1a;
+padding:20px;
+border-radius:12px;
+text-align:center;
+border:1px solid #333;
+}
+
+.voucher-card h3{
+color:gold;
+}
+
+footer{
+margin-top:50px;
+padding:25px;
+text-align:center;
+background:black;
+border-top:2px solid gold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+KAYVARA VT MARKET
+</div>
+
+<div class="subtitle">
+Top Up Game • Voucher Digital • E-Wallet
+</div>
+</header>
+
+<section class="hero">
+<h1>TOP UP GAME MURAH & CEPAT</h1>
+<p>
+Mobile Legends, Free Fire, PUBG Mobile, Roblox, Valorant dan lainnya
+</p>
+
+<a href="#topup" class="btn">
+TOP UP SEKARANG
+</a>
+</section>
+
+<h2 class="section-title">
+GAME POPULER
+</h2>
+
+<div class="games">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<h3>Mobile Legends</h3>
+<p>Diamond Murah</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<h3>Free Fire</h3>
+<p>Top Up Instan</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e">
+<h3>PUBG Mobile</h3>
+<p>UC Termurah</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f">
+<h3>Roblox</h3>
+<p>Robux Cepat</p>
+</div>
+
+</div>
+
+<section class="form-section" id="topup">
+
+<h2>FORM TOP UP</h2>
+
+<input type="text" placeholder="Masukkan ID Game">
+
+<input type="text" placeholder="Masukkan Server">
+
+<select>
+<option>Pilih Game</option>
+<option>Mobile Legends</option>
+<option>Free Fire</option>
+<option>PUBG Mobile</option>
+<option>Roblox</option>
+<option>Valorant</option>
+</select>
+
+<select>
+<option>Pilih Nominal</option>
+<option>86 Diamond - Rp20.000</option>
+<option>172 Diamond - Rp40.000</option>
+<option>257 Diamond - Rp60.000</option>
+<option>344 Diamond - Rp80.000</option>
+<option>514 Diamond - Rp120.000</option>
+</select>
+
+<button class="buy-btn">
+BELI SEKARANG
+</button>
+
+</section>
+
+<h2 class="section-title">
+VOUCHER DIGITAL
+</h2>
+
+<div class="voucher">
+
+<div class="voucher-card">
+<h3>Google Play</h3>
+<p>Voucher Rp50.000 - Rp500.000</p>
+</div>
+
+<div class="voucher-card">
+<h3>Steam Wallet</h3>
+<p>Voucher Game Steam</p>
+</div>
+
+<div class="voucher-card">
+<h3>Garena Shell</h3>
+<p>Top Up Game Garena</p>
+</div>
+
+<div class="voucher-card">
+<h3>PlayStation Store</h3>
+<p>Voucher PSN</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 KAYVARA VT MARKET
+<br>
+Top Up Game & Voucher Digital
+</footer>
+
+</body>
+</html>
